@@ -18,17 +18,17 @@ const PlatterCard = () => {
             {/* Dish Name and Counter */}
             <div className='flex justify-between items-center'>
                 <p className='font-medium text-base sm:text-lg'>Sushi</p>
-                <div className='flex justify-between w-24 sm:w-28 bg-yellow-300 px-3 sm:px-4 py-1 rounded-lg'>
+                <div className='flex justify-between items-center w-24 sm:w-28 bg-yellow-300 px-3 sm:px-4 py-1 rounded-lg'>
                     <p 
                         onClick={count > 0 ? () => setCount(prevCount => prevCount - 1) : () => {}} 
-                        className='font-semibold text-lg hover:cursor-pointer'
+                        className='font-semibold text-xl hover:cursor-pointer'
                     >
                         -
                     </p>
                     <p className=''>{count}</p>
                     <p 
                         onClick={() => setCount(prevCount => prevCount + 1)} 
-                        className='font-semibold text-lg hover:cursor-pointer'
+                        className='font-semibold text-xl hover:cursor-pointer'
                     >
                         +
                     </p>
@@ -41,9 +41,9 @@ const PlatterCard = () => {
             </p>
 
             {/* Price and Buy Now Button */}
-            <div className='flex justify-between'>
+            <div className='flex justify-between items-center'>
                 <p className='text-green-500 font-semibold text-lg sm:text-xl'>$25</p>
-                <button className='bg-blue-950 px-3 sm:px-4 py-1 rounded-lg text-white text-sm sm:text-base'>
+                <button className='bg-blue-950 w-28 px-3 sm:px-4 py-2 rounded-lg text-white text-sm sm:text-base'>
                     Buy Now
                 </button>
             </div>

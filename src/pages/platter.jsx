@@ -24,7 +24,7 @@ const Platter = () => {
             {/* Back Button and Heading */}
             <div className='relative w-full flex items-start'>
                 <div 
-                    className='absolute flex items-center space-x-2 hover:cursor-pointer' 
+                    className='hidden absolute md:flex items-center space-x-2 hover:cursor-pointer' 
                     onClick={handleGoBack}
                 >
                     <ArrowLeft />

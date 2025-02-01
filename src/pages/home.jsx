@@ -29,13 +29,13 @@ const Home = () => {
             Tap to view menu
           </p>
           <div className='w-full flex flex-col sm:flex-row justify-between space-y-3 sm:space-y-0 sm:space-x-3'>
-            <Link to="/platter" className='w-full sm:w-auto border-2 border-white hover:bg-transparent hover:text-white tracking-widest uppercase text-xs sm:text-sm font-semibold px-4 py-2 bg-white text-black text-center'>
+            <Link to="/platter" className='w-full sm:w-auto border-2 border-white bg-transparent text-white tracking-widest uppercase text-xs sm:text-sm font-semibold px-4 py-2 hover:bg-white hover:text-black text-center'>
               Chinese Platter
             </Link>
-            <Link to="/platter" className='w-full sm:w-auto border-2 border-white hover:bg-transparent hover:text-white tracking-widest uppercase text-xs sm:text-sm font-semibold px-4 py-2 bg-white text-black text-center'>
+            <Link to="/platter" className='w-full sm:w-auto border-2 border-white bg-transparent text-white tracking-widest uppercase text-xs sm:text-sm font-semibold px-4 py-2 hover:bg-white hover:text-black text-center'>
               Thai Platter
             </Link>
-            <Link to="/platter" className='w-full sm:w-auto border-2 border-white hover:bg-transparent hover:text-white tracking-widest uppercase text-xs sm:text-sm font-semibold px-4 py-2 bg-white text-black text-center'>
+            <Link to="/platter" className='w-full sm:w-auto border-2 border-white bg-transparent text-white tracking-widest uppercase text-xs sm:text-sm font-semibold px-4 py-2 hover:bg-white hover:text-black text-center'>
               Indian Platter
             </Link>
           </div>
