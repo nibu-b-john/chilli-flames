@@ -1,0 +1,111 @@
+{
+  "home": {
+    "slides": [
+      {
+        "image": "/images/background.png",
+        "overlayText": {
+          "cuisineType": "Thai and Indian Cuisine",
+          "mainText": "Enjoyable",
+          "description": "A restaurant sometimes known as a diner is a place where cooked food is sold to the public, and where people sit down to eat it. It is also a place where people go to enjoy the time and to eat a meal."
+        }
+      },
+      {
+        "image": "/images/background.png",
+        "overlayText": {
+          "cuisineType": "Another Cuisine",
+          "mainText": "Delicious",
+          "description": "Another description for the second slide."
+        }
+      },
+      {
+        "image": "/images/background.png",
+        "overlayText": {
+          "cuisineType": "Yet Another Cuisine",
+          "mainText": "Amazing",
+          "description": "Description for the third slide."
+        }
+      }
+    ],
+    "logo": "/images/logo.png",
+    "platterCategories": [
+      {
+        "name": "Chinese",
+        "route": "/chinese-platter"
+      },
+      {
+        "name": "Thai",
+        "route": "/thai-platter"
+      },
+      {
+        "name": "Indian",
+        "route": "/indian-platter"
+      }
+    ]
+  },
+  "chinese-platter": {
+    "heading": "Chinese Platter",
+    "description": "A delectable assortment of Chinese dishes.",
+    "dishes": [
+      {
+        "id": 1,
+        "image": "/images/dummy-dish.png",
+        "name": "Sushi",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        "price": 25,
+        "category": "Chinese"
+      },
+      {
+        "id": 2,
+        "image": "/images/dummy-dish.png",
+        "name": "Ramen",
+        "description": "A hearty noodle soup with rich broth and toppings.",
+        "price": 20,
+        "category": "Chinese"
+      }
+    ]
+  },
+  "thai-platter": {
+    "heading": "Thai Platter",
+    "description": "A flavorful selection of Thai delicacies.",
+    "dishes": [
+      {
+        "id": 3,
+        "image": "/images/dummy-dish.png",
+        "name": "Pad Thai",
+        "description": "Famous Thai noodle dish.",
+        "price": 18,
+        "category": "Thai"
+      },
+      {
+        "id": 4,
+        "image": "/images/dummy-dish.png",
+        "name": "Green Curry",
+        "description": "Aromatic green curry with coconut milk.",
+        "price": 22,
+        "category": "Thai"
+      }
+    ]
+  },
+  "indian-platter": {
+    "heading": "Indian Platter",
+    "description": "An exotic array of Indian dishes.",
+    "dishes": [
+      {
+        "id": 5,
+        "image": "/images/dummy-dish.png",
+        "name": "Butter Chicken",
+        "description": "Creamy and flavorful butter chicken.",
+        "price": 28,
+        "category": "Indian"
+      },
+      {
+        "id": 6,
+        "image": "/images/dummy-dish.png",
+        "name": "Samosas",
+        "description": "Crispy and savory samosas.",
+        "price": 15,
+        "category": "Indian"
+      }
+    ]
+  }
+}
