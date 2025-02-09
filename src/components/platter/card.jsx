@@ -4,7 +4,7 @@ const PlatterCard = ({ dish }) => {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="border-2 border-yellow-300 px-2 py-4 rounded-lg flex flex-col w-full sm:w-56 md:w-64 gap-2">
+    <div className="border border-black px-2 py-4 rounded-lg flex flex-col w-full sm:w-56 md:w-64 gap-2">
       {/* Dish Image */}
       <div>
         <img
@@ -44,7 +44,7 @@ const PlatterCard = ({ dish }) => {
       {/* Price and Buy Now Button */}
       <div className="flex justify-between items-center">
         <p className="text-green-500 font-semibold text-lg sm:text-xl">
-          ${dish.price}
+          £{dish.price}
         </p>
         <button className="bg-blue-950 w-28 px-3 sm:px-4 py-2 rounded-lg text-white text-sm sm:text-base">
           Buy Now

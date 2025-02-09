@@ -2,7 +2,7 @@
   "home": {
     "slides": [
       {
-        "image": "/images/background.png",
+        "image": "/images/home/background.png",
         "overlayText": {
           "cuisineType": "Thai and Indian Cuisine",
           "mainText": "Enjoyable",
@@ -10,7 +10,7 @@
         }
       },
       {
-        "image": "/images/background.png",
+        "image": "/images/home/background2.png",
         "overlayText": {
           "cuisineType": "Another Cuisine",
           "mainText": "Delicious",
@@ -18,93 +18,121 @@
         }
       },
       {
-        "image": "/images/background.png",
+        "image": "/images/home/background3.png",
         "overlayText": {
-          "cuisineType": "Yet Another Cuisine",
-          "mainText": "Amazing",
-          "description": "Description for the third slide."
+          "cuisineType": "Another Cuisine",
+          "mainText": "Delicious",
+          "description": "Another description for the second slide."
         }
       }
     ],
     "logo": "/images/logo.png",
     "platterCategories": [
       {
-        "name": "Chinese",
-        "route": "/chinese-platter"
-      },
-      {
         "name": "Thai",
-        "route": "/thai-platter"
+        "route": "/thai"
       },
       {
         "name": "Indian",
-        "route": "/indian-platter"
+        "route": "/indian"
       }
     ]
   },
-  "chinese-platter": {
-    "heading": "Chinese Platter",
-    "description": "A delectable assortment of Chinese dishes.",
-    "dishes": [
-      {
-        "id": 1,
-        "image": "/images/dummy-dish.png",
-        "name": "Sushi",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-        "price": 25,
-        "category": "Chinese"
-      },
-      {
-        "id": 2,
-        "image": "/images/dummy-dish.png",
-        "name": "Ramen",
-        "description": "A hearty noodle soup with rich broth and toppings.",
-        "price": 20,
-        "category": "Chinese"
-      }
-    ]
-  },
-  "thai-platter": {
+  "thai": {
     "heading": "Thai Platter",
     "description": "A flavorful selection of Thai delicacies.",
-    "dishes": [
+    "dishTypes": [
       {
-        "id": 3,
-        "image": "/images/dummy-dish.png",
-        "name": "Pad Thai",
-        "description": "Famous Thai noodle dish.",
-        "price": 18,
-        "category": "Thai"
+        "title": "Small Bites",
+        "description": "Perfect for sharing or enjoying alone.",
+        "dishes": [
+          {
+            "id": 3,
+            "image": "/images/platter/dummy-dish.png",
+            "name": "Pad Thai",
+            "description": "Famous Thai noodle dish.",
+            "price": 18
+          },
+          {
+            "id": 3,
+            "image": "/images/platter/dummy-dish.png",
+            "name": "Pad Thai",
+            "description": "Famous Thai noodle dish.",
+            "price": 18
+          },
+          {
+            "id": 3,
+            "image": "/images/platter/dummy-dish.png",
+            "name": "Pad Thai",
+            "description": "Famous Thai noodle dish.",
+            "price": 18
+          }
+        ]
       },
       {
-        "id": 4,
-        "image": "/images/dummy-dish.png",
-        "name": "Green Curry",
-        "description": "Aromatic green curry with coconut milk.",
-        "price": 22,
-        "category": "Thai"
+        "title": "Starters",
+        "description": "Perfect for sharing or enjoying alone.",
+        "dishes": [
+          {
+            "id": 3,
+            "image": "/images/platter/dummy-dish.png",
+            "name": "Pad Thai",
+            "description": "Famous Thai noodle dish.",
+            "price": 18
+          },
+          {
+            "id": 4,
+            "image": "/images/platter/dummy-dish.png",
+            "name": "Pad Thai",
+            "description": "Famous Thai noodle dish.",
+            "price": 18
+          }
+        ]
+      },
+      {
+        "title": "Main Dishes",
+        "description": "Hearty meals to fill you up.",
+        "dishes": [
+          {
+            "id": 4,
+            "image": "/images/platter/dummy-dish.png",
+            "name": "Green Curry",
+            "description": "Aromatic green curry with coconut milk.",
+            "price": 22
+          }
+        ]
       }
     ]
   },
-  "indian-platter": {
+  "indian": {
     "heading": "Indian Platter",
     "description": "An exotic array of Indian dishes.",
-    "dishes": [
+    "dishTypes": [
       {
-        "id": 5,
-        "image": "/images/dummy-dish.png",
-        "name": "Butter Chicken",
-        "description": "Creamy and flavorful butter chicken.",
-        "price": 28,
-        "category": "Indian"
+        "title": "Starters",
+        "description": "Tasty appetizers to start your meal.",
+        "dishes": [
+          {
+            "id": 5,
+            "image": "/images/platter/dummy-dish.png",
+            "name": "Butter Chicken",
+            "description": "Creamy and flavorful butter chicken.",
+            "price": 28
+          }
+        ]
       },
       {
-        "id": 6,
-        "image": "/images/dummy-dish.png",
-        "name": "Samosas",
-        "description": "Crispy and savory samosas.",
-        "price": 15,
-        "category": "Indian"
+        "title": "Main Course",
+        "description": "Delicious main dishes to enjoy.",
+        "dishes": [
+          {
+            "id": 6,
+            "image": "/images/platter/dummy-dish.png",
+            "name": "Samosas",
+            "description": "Crispy and savory samosas.",
+            "price": 15
+          }
+        ]
       }
     ]
   }

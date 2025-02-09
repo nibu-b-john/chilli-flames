@@ -45,6 +45,7 @@ const Home = () => {
             <img
               src={slide.image}
               alt={`Slide ${index + 1}`}
+              // className="w-full h-full"
               className="w-full h-full object-cover"
             />
           </div>
@@ -63,7 +64,7 @@ const Home = () => {
           <p className="uppercase text-base sm:text-lg font-semibold tracking-[0.3em]">
             {homeData.slides[currentSlide].overlayText.cuisineType}
           </p>
-          <p className="uppercase text-5xl sm:text-6xl md:text-8xl font-semibold tracking-[0.2em]">
+          <p className="uppercase text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-semibold tracking-[0.2em]">
             {homeData.slides[currentSlide].overlayText.mainText}
           </p>
           <p className="max-w-xl sm:max-w-2xl md:max-w-3xl tracking-wide leading-relaxed text-sm sm:text-base text-white/70">
@@ -71,17 +72,17 @@ const Home = () => {
           </p>
 
           {/* Platter Category Links */}
-          <div className="pt-4 sm:pt-6 w-[700px] space-y-4">
+          <div className="pt-4 sm:pt-6 w-full max-w-3xl space-y-4">
             <p className="uppercase text-xs sm:text-sm font-semibold tracking-widest">
               Tap to view menu
             </p>
 
-            <div className="w-full flex flex-col sm:flex-row justify-between space-y-3 sm:space-y-0">
+            <div className=" w-full flex flex-col sm:flex-row justify-center  sm:space-x-10 space-y-3 sm:space-y-0">
               {homeData.platterCategories.map((category) => (
                 <Link
                   key={category.name}
                   to={category.route}
-                  className="font-semibold text-white  px-5 py-2 tracking-wider border-2 border-white cursor-pointer hover:text-black hover:bg-white text-sm sm:text-base uppercase"
+                  className=" font-semibold text-white px-4 py-2 sm:px-5 sm:py-2 tracking-wider border-2 border-white cursor-pointer hover:text-black hover:bg-white text-sm sm:text-base uppercase"
                 >
                   {category.name} Platter
                 </Link>
