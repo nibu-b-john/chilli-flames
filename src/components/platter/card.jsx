@@ -46,7 +46,7 @@ const PlatterCard = ({ dish }) => {
       {/* Price and Buy Now Button */}
       <div className="flex justify-between items-center">
         <p className="text-green-500 font-semibold text-lg sm:text-xl">
-          £{dish.price}
+          £{count > 1 ? dish.price * count : dish.price}
         </p>
         <button className="bg-blue-950 w-28 px-3 sm:px-4 py-2 rounded-lg text-white text-sm sm:text-base">
           Buy Now
