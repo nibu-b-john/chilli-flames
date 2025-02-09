@@ -1,56 +1,73 @@
-import React, { useState } from "react";
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { updateQuantity } from "../../features/cart/cartSlice";
+import { Minus, Plus } from "lucide-react";
 
 const PlatterCard = ({ dish }) => {
-  const [count, setCount] = useState(0);
+  const dispatch = useDispatch();
+  const quantity = useSelector(
+    (state) =>
+      state.cart.items.find((item) => item.id === dish.id)?.quantity || 0
+  );
+
+  const handleIncrement = () => {
+    dispatch(
+      updateQuantity({
+        id: dish.id,
+        newQuantity: quantity + 1,
+        dish: dish,
+      })
+    );
+  };
+
+  const handleDecrement = () => {
+    dispatch(
+      updateQuantity({
+        id: dish.id,
+        newQuantity: Math.max(0, quantity - 1),
+      })
+    );
+  };
 
   return (
-    <div className="border border-black px-2 py-4 rounded-lg flex flex-col w-full sm:w-56 md:w-64 gap-2">
-      {/* Dish Image */}
-      <div>
+    <div className="bg-[#FFE5BC] px-4 py-3 rounded-lg flex flex-col w-full gap-2">
+      <div className="flex flex-col sm:flex-row gap-2">
         <img
-          className="w-full h-40 object-cover rounded-lg"
+          className="w-full sm:w-28 h-32 object-cover rounded-lg"
           src={dish.image}
           alt={dish.name}
         />
-      </div>
-
-      {/* Dish Name and Counter */}
-      <div className="flex justify-between items-center">
-        <p className="font-medium text-base sm:text-lg">{dish.name}</p>
-        <div className="flex justify-between items-center w-24 sm:w-28 bg-yellow-300 px-3 sm:px-4 py-1 rounded-lg">
-          <p
-            onClick={
-              count > 0
-                ? () => setCount((prevCount) => prevCount - 1)
-                : () => {}
-            }
-            className="font-semibold text-xl hover:cursor-pointer"
-          >
-            -
-          </p>
-          <p className="">{count}</p>
-          <p
-            onClick={() => setCount((prevCount) => prevCount + 1)}
-            className="font-semibold text-xl hover:cursor-pointer"
-          >
-            +
+        <div className="flex-1">
+          <p className="font-bold text-lg sm:text-xl">{dish.name}</p>
+          <p className="text-xs sm:text-sm whitespace-pre-wrap">
+            {dish.description}
           </p>
         </div>
       </div>
-      <div className="flex-grow"></div>
-      {/* Dish Description */}
-      <p className="text-black/50 text-xs sm:text-sm whitespace-pre-wrap">
-        {dish.description}
-      </p>
 
-      {/* Price and Buy Now Button */}
-      <div className="flex justify-between items-center">
-        <p className="text-green-500 font-semibold text-lg sm:text-xl">
-          £{count > 1 ? dish.price * count : dish.price}
+      <div className="flex flex-col sm:flex-row justify-between items-center mt-5 gap-4">
+        <p className="font-semibold text-2xl sm:text-4xl">
+          £{dish.price.toFixed(2)}
         </p>
-        <button className="bg-blue-950 w-28 px-3 sm:px-4 py-2 rounded-lg text-white text-sm sm:text-base">
-          Buy Now
-        </button>
+        <div className="w-full sm:w-40 h-14 bg-[#FFD695] p-2 rounded-lg">
+          <div className="flex justify-between items-center w-full gap-2">
+            <div
+              onClick={handleDecrement}
+              className={`bg-[#FFE5BC] rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center hover:cursor-pointer ${
+                quantity === 0 ? "opacity-50 cursor-not-allowed" : ""
+              }`}
+            >
+              <Minus className="w-4 h-4 sm:w-5 sm:h-5" />
+            </div>
+            <span className="text-2xl sm:text-3xl font-bold">{quantity}</span>
+            <div
+              onClick={handleIncrement}
+              className="bg-black text-white rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center font-semibold hover:cursor-pointer"
+            >
+              <Plus className="w-4 h-4 sm:w-5 sm:h-5" />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
