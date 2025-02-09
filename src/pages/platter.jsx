@@ -154,7 +154,7 @@ const Platter = () => {
         <div className="absolute inset-0 w-full h-full">
           <img
             className="w-full h-full object-cover"
-            src="/images/home/background.png"
+            src="/images/home/background.webp"
             alt="Restaurant Background"
           />
         </div>
@@ -173,7 +173,7 @@ const Platter = () => {
           {/* Logo */}
           <img
             className="w-auto h-12 sm:h-20 mb-8"
-            src="/images/logo.png"
+            src="/images/logo.webp"
             alt="Restaurant Logo"
           />
 
@@ -202,7 +202,7 @@ const Platter = () => {
                 <Link
                   key={category.name}
                   to={category.route}
-                  className={`px-3 sm:px-4 py-2 border-2 border-black uppercase font-semibold text-sm sm:text-base transition-colors ${
+                  className={`px-3 sm:px-4 py-2 border-2 text-center border-black uppercase font-semibold text-sm sm:text-base transition-colors ${
                     isActive
                       ? "bg-black text-white"
                       : "hover:bg-black hover:text-white"

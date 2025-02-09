@@ -2,7 +2,7 @@
   "home": {
     "slides": [
       {
-        "image": "/images/home/background4.png",
+        "image": "/images/home/background4.webp",
         "overlayText": {
           "cuisineType": "Thai and Indian Cuisine",
           "mainText": "Enjoyable",
@@ -10,7 +10,7 @@
         }
       },
       {
-        "image": "/images/home/background2.png",
+        "image": "/images/home/background2.webp",
         "overlayText": {
           "cuisineType": "Thai and Indian Cuisine",
           "mainText": "Delightful",
@@ -18,7 +18,7 @@
         }
       },
       {
-        "image": "/images/home/background3.png",
+        "image": "/images/home/background3.webp",
         "overlayText": {
           "cuisineType": "Thai and Indian Cuisine",
           "mainText": "Relaxing",
@@ -26,7 +26,7 @@
         }
       }
     ],
-    "logo": "/images/logo.png",
+    "logo": "/images/logo.webp",
     "platterCategories": [
       {
         "name": "Thai",
@@ -48,35 +48,35 @@
         "dishes": [
           {
             "id": 1,
-            "image": "/images/platter/Thai/Thai Butterfly Prawn.jpg",
+            "image": "/images/platter/Thai/Thai Butterfly Prawn.webp",
             "name": "Thai Butterfly Prawn",
             "description": "Prawns marinated in Thai spices, battered, and fried crispy.\nCalories: ~300 kcal | Allergens: Shellfish, Gluten, Dairy (if butter used)",
             "price": 18
           },
           {
             "id": 2,
-            "image": "/images/platter/Thai/Hoisin Duck Spring Roll.png",
+            "image": "/images/platter/Thai/Hoisin Duck Spring Roll.webp",
             "name": "Hoisin Duck Spring Roll",
             "description": "Crispy spring rolls filled with hoisin-glazed duck, vegetables, and spices.\nCalories: ~250 kcal | Allergens: Gluten, Soy, Sesame, Wheat",
             "price": 18
           },
           {
             "id": 3,
-            "image": "/images/platter/Thai/Veg Spring Roll .png",
+            "image": "/images/platter/Thai/Veg Spring Roll .webp",
             "name": "Veg Spring Roll",
             "description": "Crispy roll filled with mixed vegetables and spices.\nCalories: ~150 kcal | Allergens: Gluten, Soy, Wheat",
             "price": 18
           },
           {
             "id": 4,
-            "image": "/images/platter/Thai/Satay Chicken Skewers.jpg",
+            "image": "/images/platter/Thai/Satay Chicken Skewers.webp",
             "name": "Satay Chicken Skewers",
             "description": "Grilled chicken skewers served with a creamy peanut sauce.\nCalories: ~300 kcal | Allergens: Peanuts, Soy, Gluten, Dairy (if sauce contains)",
             "price": 18
           },
           {
             "id": 5,
-            "image": "/images/platter/Thai/Sticky Chicken Wings.png",
+            "image": "/images/platter/Thai/Sticky Chicken Wings.webp",
             "name": "Sticky Chicken Wings",
             "description": "Chicken wings coated in a sweet, tangy glaze and baked to perfection.\nCalories: ~450 kcal | Allergens: Gluten, Soy, Sesame, Dairy (if butter used)",
             "price": 18
@@ -89,56 +89,56 @@
         "dishes": [
           {
             "id": 6,
-            "image": "/images/platter/Thai/Green Curry.jpg",
+            "image": "/images/platter/Thai/Green Curry.webp",
             "name": "Green Curry (Chicken or Vegetables)",
             "description": "Spicy Thai green curry with coconut milk and fresh herbs.\nCalories: ~500-600 kcal | Allergens: Coconut, Soy, Fish Sauce, Peanuts (optional)",
             "price": 18
           },
           {
             "id": 7,
-            "image": "/images/platter/Thai/Massaman Curry.jpg",
+            "image": "/images/platter/Thai/Massaman Curry.webp",
             "name": "Massaman Curry (Chicken or Beef)",
             "description": "Mild, rich curry with potatoes, peanuts, and coconut milk.\nCalories: ~600-700 kcal | Allergens: Coconut, Peanuts, Soy, Fish Sauce",
             "price": 18
           },
           {
             "id": 8,
-            "image": "/images/platter/Thai/Khao Soi.jpg",
+            "image": "/images/platter/Thai/Khao Soi.webp",
             "name": "Khao Soi",
             "description": "Northern Thai curry noodle soup with chicken and egg noodles in a creamy coconut broth.\nCalories: ~700-800 kcal | Allergens: Coconut, Gluten, Soy, Peanuts (optional)",
             "price": 18
           },
           {
             "id": 9,
-            "image": "/images/platter/Thai/Panang Curry (Chicken or Beef).jpg",
+            "image": "/images/platter/Thai/Panang Curry (Chicken or Beef).webp",
             "name": "Panang Curry (Chicken or Beef)",
             "description": "Thick, mildly spicy curry with coconut milk and fragrant spices.\nCalories: ~600-700 kcal | Allergens: Coconut, Soy, Fish Sauce, Peanuts (optional)",
             "price": 18
           },
           {
             "id": 10,
-            "image": "/images/platter/Thai/Pad Thai Noodles.jpg",
+            "image": "/images/platter/Thai/Pad Thai Noodles.webp",
             "name": "Pad Thai Noodles (Chicken or Prawn)",
             "description": "Stir-fried rice noodles with chicken or prawns, eggs, tofu, peanuts, and tamarind sauce.\nCalories: ~600-750 kcal | Allergens: Peanuts, Soy, Fish Sauce, Eggs, Gluten (optional)",
             "price": 18
           },
           {
             "id": 11,
-            "image": "/images/platter/Thai/Singapore Noodles.png",
+            "image": "/images/platter/Thai/Singapore Noodles.webp",
             "name": "Singapore Noodles (Chicken or Prawn)",
             "description": "Stir-fried rice vermicelli with chicken or prawns, vegetables, and curry powder.\nCalories: ~500-650 kcal | Allergens: Soy, Sesame, Shrimp (if prawns used), Gluten (optional)",
             "price": 18
           },
           {
             "id": 12,
-            "image": "/images/platter/Thai/House Special Noodles.jpg",
+            "image": "/images/platter/Thai/House Special Noodles.webp",
             "name": "House Special Noodles (Chicken or Prawn)",
             "description": "Stir-fried noodles with mixed vegetables and savory sauce.\nCalories: ~600-750 kcal | Allergens: Soy, Seafood (if prawns used), Gluten",
             "price": 18
           },
           {
             "id": 13,
-            "image": "/images/platter/Thai/Kao Pad Pro.png",
+            "image": "/images/platter/Thai/Kao Pad Pro.webp",
             "name": "Kao Pad Pro (Thai Fried Rice)",
             "description": "Stir-fried jasmine rice with chicken or prawns, vegetables, eggs, and soy-based sauce.\nCalories: ~600-700 kcal | Allergens: Soy, Seafood (if prawns used), Eggs, Gluten",
             "price": 18
@@ -151,21 +151,21 @@
         "dishes": [
           {
             "id": 14,
-            "image": "/images/platter/Thai/Stir Fry Asian Greens.jpg",
+            "image": "/images/platter/Thai/Stir Fry Asian Greens.webp",
             "name": "Stir Fry Asian Greens",
             "description": "Fresh Asian vegetables stir-fried in a savory sauce.\nCalories: ~150 kcal | Allergens: Soy, Gluten (if soy sauce used)",
             "price": 22
           },
           {
             "id": 15,
-            "image": "/images/platter/Thai/Stir Fry Asian Greens.jpg",
+            "image": "/images/platter/Thai/Stir Fry Asian Greens.webp",
             "name": "Pad King",
             "description": "Stir-fried ginger with vegetables or choice of meat in a fragrant sauce.\nCalories: ~250-350 kcal | Allergens: Soy, Gluten, Fish Sauce (if used)",
             "price": 22
           },
           {
             "id": 16,
-            "image": "/images/platter/Thai/Stir Fry Asian Greens.jpg",
+            "image": "/images/platter/Thai/Stir Fry Asian Greens.webp",
             "name": "Pad Prek Hang",
             "description": "Stir-fried vegetables and meat in a sweet, spicy sauce with herbs.\nCalories: ~300-400 kcal | Allergens: Soy, Gluten, Fish Sauce (if used)",
             "price": 22
@@ -184,42 +184,42 @@
         "dishes": [
           {
             "id": 17,
-            "image": "/images/platter/Indian/Samosa.jpg",
+            "image": "/images/platter/Indian/Samosa.webp",
             "name": "Samosa",
             "description": "Crispy pastry filled with spiced potatoes and peas.\nCalories: ~150 kcal | Allergens: Gluten, Soy",
             "price": 10
           },
           {
             "id": 18,
-            "image": "/images/platter/Indian/Onion Bhaji.jpg",
+            "image": "/images/platter/Indian/Onion Bhaji.webp",
             "name": "Onion Bhaji",
             "description": "Crispy fried onion fritters, seasoned with spices.\nCalories: ~180 kcal | Allergens: Gluten, Soy",
             "price": 10
           },
           {
             "id": 19,
-            "image": "/images/platter/Indian/Chicken Pakora.jpg",
+            "image": "/images/platter/Indian/Chicken Pakora.webp",
             "name": "Chicken Pakora",
             "description": "Tender chicken pieces battered and deep-fried with aromatic spices.\nCalories: ~250 kcal | Allergens: Gluten, Soy, Dairy",
             "price": 10
           },
           {
             "id": 20,
-            "image": "/images/platter/Indian/Crispy Chicken Wings.png",
+            "image": "/images/platter/Indian/Crispy Chicken Wings.webp",
             "name": "Crispy Chicken Wings",
             "description": "Golden, crispy fried chicken wings seasoned with spices.\nCalories: ~400 kcal | Allergens: Gluten, Soy, Dairy (if butter used)",
             "price": 10
           },
           {
             "id": 21,
-            "image": "/images/platter/Indian/Chicken Tikka.png",
+            "image": "/images/platter/Indian/Chicken Tikka.webp",
             "name": "Chicken Tikka",
             "description": "Marinated boneless chicken grilled with spices, served with a tangy sauce.\nCalories: ~200 kcal | Allergens: Dairy",
             "price": 10
           },
           {
             "id": 22,
-            "image": "/images/platter/Indian/Tandoori chicken.png",
+            "image": "/images/platter/Indian/Tandoori chicken.webp",
             "name": "Tandoori Chicken",
             "description": "Bone-in chicken marinated in yogurt and spices, cooked in a tandoor oven.\nCalories: ~250 kcal | Allergens: Dairy",
             "price": 10
@@ -232,42 +232,42 @@
         "dishes": [
           {
             "id": 23,
-            "image": "/images/platter/Indian/Butter Chicken.jpg",
+            "image": "/images/platter/Indian/Butter Chicken.webp",
             "name": "Butter Chicken",
             "description": "Tender chicken cooked in a rich, creamy tomato sauce with butter and spices.\nCalories: ~400-450 kcal | Allergens: Dairy, Gluten, Nuts (possible)",
             "price": 15
           },
           {
             "id": 24,
-            "image": "/images/platter/Indian/Chicken Tikka.jpg",
+            "image": "/images/platter/Indian/Chicken Tikka.webp",
             "name": "Chicken Tikka Masala",
             "description": "Marinated chicken grilled and simmered in a creamy tomato-based sauce with spices.\nCalories: ~350-400 kcal | Allergens: Dairy, Gluten, Nuts (possible)",
             "price": 15
           },
           {
             "id": 25,
-            "image": "/images/platter/Indian/Madras Curry.png",
+            "image": "/images/platter/Indian/Madras Curry.webp",
             "name": "Madras Curry (Chicken, Beef, Prawn, Lamb)",
             "description": "Tender chicken cooked in a rich, creamy tomato sauce with butter and spices.\nCalories: ~400-450 kcal | Allergens: Dairy, Gluten, Nuts (possible)",
             "price": 15
           },
           {
             "id": 26,
-            "image": "/images/platter/Indian/Korma (Chicken, Beef, Prawn, Lamb).jpg",
+            "image": "/images/platter/Indian/Korma (Chicken, Beef, Prawn, Lamb).webp",
             "name": "Korma (Chicken, Beef, Prawn, Lamb)",
             "description": "Mild, creamy curry made with yogurt, nuts, and aromatic spices.\nCalories: ~400-450 kcal | Allergens: Dairy, Gluten, Nuts (possible)",
             "price": 15
           },
           {
             "id": 27,
-            "image": "/images/platter/Indian/Jalfrezi.png",
+            "image": "/images/platter/Indian/Jalfrezi.webp",
             "name": "Jalfrezi (Chicken, Beef, Prawn, Lamb)",
             "description": "Stir-fried meat or seafood with bell peppers, onions, tomatoes, and a spicy, tangy sauce.\nCalories: ~300-350 kcal | Allergens: Gluten (possible cross-contamination), Soy (if soy sauce used)",
             "price": 15
           },
           {
             "id": 28,
-            "image": "/images/platter/Indian/Biryani.jpg",
+            "image": "/images/platter/Indian/Biryani.webp",
             "name": "Biryani (Chicken, Beef, Lamb)",
             "description": "Fragrant basmati rice cooked with tender meat, aromatic spices, and herbs.\nCalories: ~700-900 kcal | Allergens: Gluten, Dairy (optional), Nuts (optional)",
             "price": 15
@@ -280,35 +280,35 @@
         "dishes": [
           {
             "id": 29,
-            "image": "/images/platter/Indian/Plain rice.jpg",
+            "image": "/images/platter/Indian/Plain rice.webp",
             "name": "Plain Rice",
             "description": "Steamed basmati rice, fluffy and fragrant.\nCalories: ~150 kcal | Allergens: None",
             "price": 15
           },
           {
             "id": 30,
-            "image": "/images/platter/Indian/Pilau Rice.jpg",
+            "image": "/images/platter/Indian/Pilau Rice.webp",
             "name": "Pilau Rice",
             "description": "Aromatic basmati rice cooked with spices and saffron.\nCalories: ~200 kcal | Allergens: None",
             "price": 15
           },
           {
             "id": 31,
-            "image": "/images/platter/Indian/Fried Rice.jpg",
+            "image": "/images/platter/Indian/Fried Rice.webp",
             "name": "Fried Rice (Egg/Veg/Chicken)",
             "description": "Stir-fried rice with choice of egg, vegetables, or chicken, seasoned with spices.\nCalories: ~250-350 kcal | Allergens: Egg, Soy, Gluten (if soy sauce used), Dairy (if butter used)",
             "price": 15
           },
           {
             "id": 32,
-            "image": "/images/platter/Indian/House Special Fried Rice.jpg",
+            "image": "/images/platter/Indian/House Special Fried Rice.webp",
             "name": "House Special Fried Rice (Chicken/Prawn)",
             "description": "Stir-fried rice with chicken or prawns, vegetables, eggs, and savory seasoning.\nCalories: ~600-750 kcal | Allergens: Soy, Seafood (if prawns used), Eggs, Gluten",
             "price": 15
           },
           {
             "id": 33,
-            "image": "/images/platter/Indian/Fried Potatoes.jpg",
+            "image": "/images/platter/Indian/Fried Potatoes.webp",
             "name": "Fried Potatoes",
             "description": "Crispy golden fried potato pieces, seasoned to perfection.\nCalories: ~200 kcal | Allergens: None",
             "price": 15
