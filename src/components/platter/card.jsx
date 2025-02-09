@@ -39,7 +39,9 @@ const PlatterCard = ({ dish }) => {
       </div>
       <div className="flex-grow"></div>
       {/* Dish Description */}
-      <p className="text-black/50 text-xs sm:text-sm">{dish.description}</p>
+      <p className="text-black/50 text-xs sm:text-sm whitespace-pre-wrap">
+        {dish.description}
+      </p>
 
       {/* Price and Buy Now Button */}
       <div className="flex justify-between items-center">
