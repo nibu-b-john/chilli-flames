@@ -150,32 +150,42 @@ const Platter = () => {
       </div>
 
       <div className="relative">
-        <img
-          className="w-full h-48 sm:h-64 object-cover"
-          src="/images/home/background.png"
-          alt="Restaurant Background"
-        />
-        {/* <img
-          className="w-auto h-12 sm:h-20 absolute top-16 sm:top-20 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-          src="/images/logo.png"
-          alt="Restaurant Logo"
-        /> */}
-
-        <div
-          className="hidden font-semibold absolute top-10 left-10 md:flex items-center space-x-2 hover:cursor-pointer"
-          onClick={handleGoBack}
-        >
-          <ArrowLeft className="text-white" />
-          <p className="text-lg sm:text-xl text-white">Back</p>
+        {/* Background Image */}
+        <div className="absolute inset-0 w-full h-full">
+          <img
+            className="w-full h-full object-cover"
+            src="/images/home/background.png"
+            alt="Restaurant Background"
+          />
         </div>
 
-        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white">
-          <h2 className="text-center text-xl sm:text-2xl md:text-3xl uppercase font-semibold">
-            {platterData[platterType].heading}
-          </h2>
-          <p className="mt-2 max-w-xl text-center text-xs sm:text-sm md:text-base px-4">
-            {platterData[platterType].description}
-          </p>
+        {/* Content */}
+        <div className="relative z-10 flex flex-col items-center pt-8 pb-24  px-4">
+          {/* Back Button */}
+          <div
+            className="hidden md:flex items-center space-x-2 self-start mb-8 hover:cursor-pointer"
+            onClick={handleGoBack}
+          >
+            <ArrowLeft className="text-white" />
+            <p className="text-lg sm:text-xl text-white">Back</p>
+          </div>
+
+          {/* Logo */}
+          <img
+            className="w-auto h-12 sm:h-20 mb-8"
+            src="/images/logo.png"
+            alt="Restaurant Logo"
+          />
+
+          {/* Heading & Description */}
+          <div className="text-center">
+            <h2 className="text-xl sm:text-2xl md:text-3xl uppercase font-semibold text-white">
+              {platterData[platterType].heading}
+            </h2>
+            <p className="mt-2 max-w-xl mx-auto text-xs sm:text-sm md:text-base text-white">
+              {platterData[platterType].description}
+            </p>
+          </div>
         </div>
       </div>
 
