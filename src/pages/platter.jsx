@@ -2,9 +2,14 @@ import React, { useEffect, useState } from "react";
 import { ArrowLeft, ShoppingCart, X } from "lucide-react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import PlatterCard from "../components/platter/card";
-import { useSelector } from "react-redux";
-import { selectCartItems, selectSubtotal } from "../features/cart/cartSlice";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  clearCart,
+  selectCartItems,
+  selectSubtotal,
+} from "../features/cart/cartSlice";
 import { useForm } from "react-hook-form";
+import { Watch } from "react-loader-spinner";
 
 const Platter = () => {
   const navigate = useNavigate();
@@ -14,6 +19,7 @@ const Platter = () => {
   const [showCheckoutModal, setShowCheckoutModal] = useState(false);
   const cartItems = useSelector(selectCartItems);
   const subtotal = useSelector(selectSubtotal);
+  const dispatch = useDispatch();
 
   const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
   const scriptUrl =
@@ -40,8 +46,10 @@ const Platter = () => {
       handleSubmit,
       formState: { errors },
     } = useForm();
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
     const onSubmit = async (data) => {
+      setIsSubmitting(true);
       try {
         const response = await fetch(scriptUrl, {
           method: "POST",
@@ -53,6 +61,7 @@ const Platter = () => {
 
         if (response.ok) {
           alert("Order placed successfully!");
+          dispatch(clearCart());
           setShowCheckoutModal(false);
         } else {
           alert("Order submission failed. Please try again.");
@@ -60,15 +69,32 @@ const Platter = () => {
       } catch (error) {
         console.error("Error submitting order:", error);
         alert("An error occurred. Please try again.");
+      } finally {
+        setIsSubmitting(false);
       }
     };
 
     return (
-      <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
-        <div className="bg-[#FFF0D8] rounded-lg w-full max-w-md p-6 relative">
+      <div className="fixed inset-0 bg-dark/50 z-50 flex items-center justify-center p-4">
+        {isSubmitting && (
+          <div className="fixed inset-0 bg-dark/70 z-[60] flex flex-col items-center justify-center">
+            <Watch
+              visible={true}
+              height="80"
+              width="80"
+              radius="48"
+              color="#000"
+              ariaLabel="watch-loading"
+            />
+            <p className="text-dark mt-4 text-lg">Processing Your Order...</p>
+          </div>
+        )}
+
+        <div className="bg-secondary rounded-lg w-full max-w-md p-6 relative">
           <button
             onClick={() => setShowCheckoutModal(false)}
             className="absolute top-4 right-4 p-2 hover:bg-gray-100 rounded-full"
+            disabled={isSubmitting}
           >
             <X className="w-6 h-6" />
           </button>
@@ -82,6 +108,7 @@ const Platter = () => {
                 placeholder="Type your name"
                 {...register("Name", { required: true })}
                 className="w-full p-2 border rounded bg-transparent"
+                disabled={isSubmitting}
               />
               {errors.Name && (
                 <span className="text-red-500 text-sm">
@@ -96,6 +123,7 @@ const Platter = () => {
                 placeholder="Type your address"
                 {...register("Address", { required: true })}
                 className="w-full p-2 border rounded bg-transparent"
+                disabled={isSubmitting}
               />
               {errors.Address && (
                 <span className="text-red-500 text-sm">
@@ -110,6 +138,7 @@ const Platter = () => {
                 placeholder="Type your EIR code"
                 {...register("EIRCode", { required: true })}
                 className="w-full p-2 border rounded bg-transparent"
+                disabled={isSubmitting}
               />
               {errors.EIRCode && (
                 <span className="text-red-500 text-sm">
@@ -120,9 +149,10 @@ const Platter = () => {
 
             <button
               type="submit"
-              className="w-full bg-black text-white py-3 rounded-lg text-lg font-medium hover:bg-gray-800"
+              disabled={isSubmitting}
+              className="w-full bg-dark text-light py-3 rounded-lg text-lg font-medium hover:bg-gray-800 disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              Submit Order
+              {isSubmitting ? "Submitting..." : "Submit Order"}
             </button>
           </form>
         </div>
@@ -130,7 +160,20 @@ const Platter = () => {
     );
   };
 
-  if (!platterData) return <div>Loading...</div>;
+  if (!platterData)
+    return (
+      <div className="w-screen h-screen flex flex-col justify-center items-center">
+        <Watch
+          visible={true}
+          height="80"
+          width="80"
+          radius="48"
+          color="#000"
+          ariaLabel="watch-loading"
+        />
+        <p>Loading...</p>
+      </div>
+    );
 
   return (
     <div>
@@ -138,11 +181,11 @@ const Platter = () => {
       <div className="fixed bottom-6 right-6 md:hidden z-50">
         <button
           onClick={() => setIsCartOpen(!isCartOpen)}
-          className="bg-[#FFD695] p-4 rounded-full shadow-lg relative transition-transform hover:scale-105"
+          className="bg-primary p-4 rounded-full shadow-lg relative transition-transform hover:scale-105"
         >
           <ShoppingCart className="w-6 h-6" />
           {totalItems > 0 && (
-            <span className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs">
+            <span className="absolute -top-2 -right-2 bg-red-500 text-light rounded-full w-6 h-6 flex items-center justify-center text-xs">
               {totalItems}
             </span>
           )}
@@ -151,45 +194,46 @@ const Platter = () => {
 
       <div className="relative">
         {/* Background Image */}
-        <div className="absolute inset-0 w-full h-full">
+        <div className="absolute inset-0 w-full h-full ">
           <img
-            className="w-full h-full object-cover"
-            src="/images/home/background.webp"
+            className="w-full h-full object-cover "
+            src={platterData.metadata.platterBackground}
             alt="Restaurant Background"
           />
+          <div className="absolute inset-0 bg-overlay"></div>
         </div>
 
         {/* Content */}
-        <div className="relative z-10 flex flex-col items-center pt-8 pb-24  px-4">
+        <div className="relative z-10 flex flex-col items-center pt-8 pb-24 px-4">
           {/* Back Button */}
           <div
             className="hidden md:flex items-center space-x-2 self-start mb-8 hover:cursor-pointer"
             onClick={handleGoBack}
           >
-            <ArrowLeft className="text-white" />
-            <p className="text-lg sm:text-xl text-white">Back</p>
+            <ArrowLeft className="text-light" />
+            <p className="text-lg sm:text-xl text-light">Back</p>
           </div>
 
           {/* Logo */}
           <img
             className="w-auto h-12 sm:h-20 mb-8"
-            src="/images/logo.webp"
+            src={platterData.metadata.logo}
             alt="Restaurant Logo"
           />
 
           {/* Heading & Description */}
           <div className="text-center">
-            <h2 className="text-xl sm:text-2xl md:text-3xl uppercase font-semibold text-white">
+            <h2 className="text-xl sm:text-2xl md:text-3xl uppercase font-semibold text-light">
               {platterData[platterType].heading}
             </h2>
-            <p className="mt-2 max-w-xl mx-auto text-xs sm:text-sm md:text-base text-white">
+            <p className="mt-2 max-w-xl mx-auto text-xs sm:text-sm md:text-base text-light">
               {platterData[platterType].description}
             </p>
           </div>
         </div>
       </div>
 
-      <div className="bg-[#FFF0D8] min-h-screen flex flex-col items-center px-4 sm:px-6 xl:px-32 py-6 gap-3">
+      <div className="bg-secondary min-h-screen flex flex-col items-center px-4 sm:px-6 xl:px-32 py-6 gap-3">
         <h3 className="text-xl md:text-2xl lg:text-3xl uppercase font-semibold tracking-widest">
           Regular Menu
         </h3>
@@ -202,10 +246,10 @@ const Platter = () => {
                 <Link
                   key={category.name}
                   to={category.route}
-                  className={`px-3 sm:px-4 py-2 border-2 text-center border-black uppercase font-semibold text-sm sm:text-base transition-colors ${
+                  className={`px-3 sm:px-4 py-2 border-2 text-center border-dark uppercase font-semibold text-sm sm:text-base transition-colors ${
                     isActive
-                      ? "bg-black text-white"
-                      : "hover:bg-black hover:text-white"
+                      ? "bg-dark text-light"
+                      : "hover:bg-dark hover:text-light"
                   }`}
                 >
                   {category.name} Platter
@@ -246,7 +290,7 @@ const Platter = () => {
                 isCartOpen ? "block" : "hidden md:block"
               }`}
             >
-              <div className="sticky top-4 bg-[#FFE5BC] p-4 sm:p-6 rounded-lg shadow-lg">
+              <div className="sticky top-4 bg-accent p-4 sm:p-6 rounded-lg shadow-lg">
                 <div className="flex justify-between items-center mb-6">
                   <h4 className="text-lg sm:text-xl font-bold">Your Order</h4>
                   <button
@@ -301,7 +345,7 @@ const Platter = () => {
                       </p>
 
                       <button
-                        className="w-full bg-black text-white py-3 rounded-lg mt-4"
+                        className="w-full bg-dark text-light py-3 rounded-lg mt-4"
                         onClick={() => setShowCheckoutModal(true)}
                       >
                         Place Order

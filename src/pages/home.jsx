@@ -41,7 +41,7 @@ const Home = () => {
       >
         {homeData.slides.map((slide, index) => (
           <div key={index} className="flex-[0_0_100%] min-w-0 relative">
-            <div className="absolute inset-0 bg-black bg-opacity-25" />
+            <div className="absolute inset-0 bg-overlay" />
             <img
               src={slide.image}
               alt={`Slide ${index + 1}`}
@@ -60,14 +60,14 @@ const Home = () => {
           alt="Restaurant Logo"
         />
 
-        <div className="space-y-3 text-white flex flex-col items-center text-center mb-auto -mt-20">
+        <div className="space-y-3 text-light flex flex-col items-center text-center mb-auto -mt-20">
           <p className="uppercase text-base sm:text-lg font-semibold tracking-[0.3em]">
             {homeData.slides[currentSlide].overlayText.cuisineType}
           </p>
           <p className="uppercase text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-semibold tracking-[0.2em]">
             {homeData.slides[currentSlide].overlayText.mainText}
           </p>
-          <p className="max-w-xl sm:max-w-2xl md:max-w-3xl tracking-wide leading-relaxed text-sm sm:text-base text-white/70">
+          <p className="max-w-xl sm:max-w-2xl md:max-w-3xl tracking-wide leading-relaxed text-sm sm:text-base text-light/70">
             {homeData.slides[currentSlide].overlayText.description}
           </p>
 
@@ -82,7 +82,7 @@ const Home = () => {
                 <Link
                   key={category.name}
                   to={category.route}
-                  className=" font-semibold text-white px-4 py-2 sm:px-5 sm:py-2 tracking-wider border-2 border-white cursor-pointer hover:text-black hover:bg-white text-sm sm:text-base uppercase"
+                  className=" font-semibold text-light px-4 py-2 sm:px-5 sm:py-2 tracking-wider border-2 border-light cursor-pointer hover:text-dark hover:bg-light text-sm sm:text-base uppercase"
                 >
                   {category.name} Platter
                 </Link>

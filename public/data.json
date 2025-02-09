@@ -1,4 +1,8 @@
 {
+  "metadata": {
+    "logo": "/images/logo.webp",
+    "platterBackground": "/images/home/background.webp"
+  },
   "home": {
     "slides": [
       {
